@@ -1,6 +1,0 @@
-neo4j (2025.10.1-2) experimental; urgency=low
-
-  * Converted from .rpm format to .deb by alien version 8.95.6
-  
-
- -- root <root@Senthil>  Thu, 11 Dec 2025 20:08:10 -0500
