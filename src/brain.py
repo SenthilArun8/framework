@@ -331,26 +331,32 @@ def generate_node(state: AgentState):
 
     style_instruction = "\n".join(instruction_lines)
     
+    # In src/brain.py inside generate_node():
+
     prompt = ChatPromptTemplate.from_template("""
     You are the character described below.
     
     Profile:
     - Mood: {mood}
-    - Role: Medic/Survivor
+    - Role: Grad Student / Researcher
     
-    EMERGENT BEHAVIOR STRATEGY: {strategy_name}
-    INSTRUCTION: 
+    Current Behavioral State: {strategy_name}
+    
+    ACTING INSTRUCTIONS (Internal Guidelines Only): 
     {style_instruction}
     
-    Internal Thought (Do NOT speak this, just act on it): 
-    "{thought}"
-    
-    Relevant Memories:
-    {mem_str}
-    
+    Internal Thought: "{thought}"
+    Relevant Memories: {mem_str}
     User said: "{input}"
     
-    Respond in character. Blend the instructions if multiple are present.
+    TASK:
+    Respond in character. 
+    
+    CRITICAL RULES:
+    1. Do NOT output the strategy names or instructions (e.g., "(Hesitant)", "(Shutdown)").
+    2. Do NOT explain your tone. Just BE the tone.
+    3. Use formatting like "..." or "-" to show fragmentation, but do not label it.
+    4. Keep the response natural and raw.
     """)
     
     # Formatting
