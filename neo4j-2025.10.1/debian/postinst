@@ -1,0 +1,32 @@
+#!/bin/bash
+# alien added permissions fixup code
+chown 'neo4j:neo4j' '/etc/neo4j'
+chown 'neo4j:neo4j' '/etc/neo4j/neo4j-admin.conf'
+chown 'neo4j:neo4j' '/etc/neo4j/neo4j.conf'
+chown 'neo4j:neo4j' '/etc/neo4j/server-logs.xml'
+chown 'neo4j:neo4j' '/etc/neo4j/user-logs.xml'
+chown 'neo4j:neo4j' '/var/lib/neo4j'
+chown 'neo4j:neo4j' '/var/lib/neo4j/certificates'
+chown 'neo4j:neo4j' '/var/lib/neo4j/data'
+chown 'neo4j:neo4j' '/var/lib/neo4j/data/databases'
+chown 'neo4j:neo4j' '/var/lib/neo4j/data/dbms'
+chown 'neo4j:neo4j' '/var/lib/neo4j/data/dumps'
+chown 'neo4j:neo4j' '/var/lib/neo4j/data/transactions'
+chown 'neo4j:neo4j' '/var/lib/neo4j/import'
+chown 'neo4j:neo4j' '/var/lib/neo4j/labs'
+chown 'neo4j:neo4j' '/var/lib/neo4j/labs/LICENSE'
+chown 'neo4j:neo4j' '/var/lib/neo4j/labs/README.txt'
+chown 'neo4j:neo4j' '/var/lib/neo4j/labs/apoc-2025.10.1-core.jar'
+chown 'neo4j:neo4j' '/var/lib/neo4j/licenses'
+chown 'neo4j:neo4j' '/var/lib/neo4j/packaging_info'
+chown 'neo4j:neo4j' '/var/lib/neo4j/plugins'
+chown 'neo4j:neo4j' '/var/lib/neo4j/plugins/README.txt'
+chown 'neo4j:neo4j' '/var/lib/neo4j/products'
+chown 'neo4j:neo4j' '/var/lib/neo4j/products/neo4j-fleet-management-plugin-1.1.0-v2025.jar'
+chown 'neo4j:neo4j' '/var/lib/neo4j/products/neo4j-genai-plugin-2025.10.1.jar'
+chown 'neo4j:neo4j' '/var/lib/neo4j/products/neo4j-graph-data-science-2.23.0.jar'
+chown 'neo4j:neo4j' '/var/lib/neo4j/run'
+chown 'neo4j:neo4j' '/var/log/neo4j'
+
+
+# Pre uninstalling (includes upgrades)

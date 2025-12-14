@@ -1,0 +1,120 @@
+#!/bin/bash
+
+
+if [ "$1" -gt 1 ]; then
+  # Upgrading
+  # persist old neo4j version in state
+    mkdir -p /var/lib/rpm-state/neo4j
+    echo "$(neo4j-admin --version | sed -e 's/neo4j-admin //g')" > /var/lib/rpm-state/neo4j/old-version
+    FROM_VERSION=$(cat /var/lib/rpm-state/neo4j/old-version)
+    case ${FROM_VERSION} in
+        2.*|3.*)
+                # this case is hit if we are upgrading from version 2.X or 3.X, no longer supported as of 5.0
+            echo >&2 "-----------------------------------------------------------------------------
+It looks like you are upgrading from Neo4j ${FROM_VERSION}.
+Many configuration changes and improvements have been made in Neo4j 2025.10.1. These changes cannot be handled automatically by this package installation.
+
+To upgrade, you must first upgrade to the latest 3.5 version, and then to the latest 4.4 version. From there, it will be possible to upgrade to Neo4j 5.
+
+The upgrade guide for Neo4j 4.4 can be found at:
+https://neo4j.com/docs/upgrade-migration-guide/current/version-4/
+-----------------------------------------------------------------------------"
+            exit 1
+            ;;
+        4.4.*)
+            if [[ ${NEO4J_HAVE_BACKUPS-no} != "yes" ]]; then
+                if ! whiptail --title "Have you created backups of the data?" --defaultno --yesno "\
+As described in the upgrade guide for Neo4j 5:
+   https://neo4j.com/docs/upgrade-migration-guide/current/version-5/
+You must back up your databases before you upgrade your installation.
+This is because, after upgrade, each database must be restored and then migrated (see the guide for specific commands).
+Prior to this, your Neo4j 5 installation will appear to have no databases.
+
+To prevent data loss, please back up your databases before upgrading to Neo4j 2025.10.1.
+
+For instructions on how to back up a Neo4j 4.4 database, please check the documentation here:
+   https://neo4j.com/docs/operations-manual/4.4/backup-restore/
+
+To non-interactively confirm that backups have been made, you can set environment variable:
+   \"NEO4J_HAVE_BACKUPS=yes\"
+
+Please check the migration guide at
+   https://neo4j.com/docs/upgrade-migration-guide/current/version-5/ for full instructions.
+
+Have you created backups of the data?" 20 80 2>&1 >/dev/tty; then
+                    echo >&2 "-----------------------------------------------------------------------------
+You must back up your databases before you upgrade your installation.
+
+For instructions on how to back up a Neo4j 4.4 database, please check the documentation here:
+   https://neo4j.com/docs/operations-manual/4.4/backup-restore/
+
+To non-interactively confirm that backups have been made, you can set environment variable:
+   \"NEO4J_HAVE_BACKUPS=yes\"
+-----------------------------------------------------------------------------"
+                    exit 1
+                fi
+            fi
+            if [ -d /var/lib/neo4j/data ] && [ -r /var/lib/neo4j/data ] && [ -w /var/lib/neo4j ]; then
+                echo "moving contents of /var/lib/neo4j/data to /var/lib/neo4j/data-unmigrated-from-4.4"
+                mv /var/lib/neo4j/data /var/lib/neo4j/data-unmigrated-from-4.4
+                echo "
+=================================================
+Neo4j data has been moved.
+
+To prevent data loss on upgrade, the existing data in /var/lib/neo4j/data folder has been moved to
+/var/lib/neo4j/data-unmigrated-from-4.4
+
+If you created backups, this folder can be deleted.
+
+If you did not create backups, you will have to downgrade Neo4j back to ${FROM_VERSION},
+then move /var/lib/neo4j/data-unmigrated-from-4.4 back to /var/lib/neo4j/data in order to restore your data.
+=================================================
+"
+            fi
+            ;;
+        4.*)
+                echo >&2 "-----------------------------------------------------------------------------
+It looks like you are upgrading from Neo4j ${FROM_VERSION}.
+Many configuration changes and improvements have been made in Neo4j 2025.10.1. These changes cannot be handled automatically by this package installation.
+
+To upgrade, you must first upgrade to the latest 4.4 version. From there, it will be possible to upgrade to Neo4j 5.
+
+The upgrade guide for Neo4j 4.4 can be found at:
+https://neo4j.com/docs/upgrade-migration-guide/current/version-4/
+-----------------------------------------------------------------------------"
+            exit 1
+            ;;
+    esac
+    # Remember if neo4j is running
+    if [ -e "/run/systemd/system" ]; then
+        # SystemD is the init-system
+        if systemctl is-active --quiet neo4j > /dev/null 2>&1 ; then
+            mkdir -p /var/lib/rpm-state/neo4j
+            touch /var/lib/rpm-state/neo4j/running
+            systemctl stop neo4j > /dev/null 2>&1 || :
+        fi
+        else
+        # SysVInit must be the init-system
+        if service neo4j status > /dev/null 2>&1 ; then
+            mkdir -p /var/lib/rpm-state/neo4j
+            touch /var/lib/rpm-state/neo4j/running
+            service neo4j stop > /dev/null 2>&1 || :
+        fi
+    fi
+    # The default run directory changed in 4.4 from /run/neo4j to neo4jhome/run so we need to update the old conf
+    # if the conf is still using the default redhat override to /run/neo4j/
+    if [ -e /etc/neo4j/neo4j.conf ] && [ -w /etc/neo4j/neo4j.conf ]; then
+        sed -i 's|^server.directories.run=/var/run/neo4j|#server.directories.run=run|' /etc/neo4j/neo4j.conf
+    fi
+fi # end of if upgrade block
+
+# Create neo4j user if it doesn't exist.
+if ! id neo4j > /dev/null 2>&1 ; then
+  useradd --system --user-group --home /var/lib/neo4j --shell /bin/bash neo4j
+else
+  # Make sure a neo4j group exists in case user is upgrading
+  # from older version where no such group was created
+  groupadd --system --force neo4j
+  # Make sure neo4j user's primary group is neo4j
+  usermod --gid neo4j neo4j > /dev/null 2>&1
+fi

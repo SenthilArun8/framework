@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Character HUD</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>LIVING CHARACTER <span id="char-name">SYSTEM</span></h1>
+            <div style="display:flex; gap:10px; align-items:center;">
+                <button id="reset-btn" class="danger-btn" title="Reset Character Memory">⚠️ RESET</button>
+                <div class="status-badge" id="conn-status">DISCONNECTED</div>
+            </div>
+        </div>
+
+        <!-- BENTO GRID -->
+        <div class="bento-grid">
+
+            <!-- 1. PSYCHE (Top Left) -->
+            <div class="card bento-tall" id="psyche-card">
+                <h2>🧠 Psyche Profile</h2>
+                <div class="stat-row">
+                    <span class="label">Mood</span>
+                    <span class="value" id="mood-val">---</span>
+                </div>
+                <div class="stat-row">
+                    <span class="label">Goals</span>
+                    <ul class="micro-list" id="goals-list"></ul>
+                </div>
+                <h3>Core Values</h3>
+                <div id="values-list" class="bars-container"></div>
+            </div>
+
+            <!-- 2. MAIN CHAT (Center) -->
+            <div class="card bento-wide bento-tall" id="chat-card">
+                <h2>💬 Interaction Stream</h2>
+                <div id="chat-history" class="scroll-box"></div>
+                <div class="chat-input-area">
+                    <input type="text" id="user-input" placeholder="Type a message..." autocomplete="off">
+                    <button id="send-btn">➤</button>
+                </div>
+            </div>
+
+            <!-- 3. RELATIONSHIPS (Top Right) -->
+            <div class="card" id="rel-card">
+                <h2>🤝 Relationship</h2>
+                <div class="circle-meters">
+                    <div class="meter-wrapper">
+                        <svg viewBox="0 0 36 36" class="circular-chart blue">
+                            <path class="circle-bg"
+                                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" id="trust-circle" stroke-dasharray="0, 100"
+                                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <text x="18" y="20.35" class="percentage" id="trust-text">0%</text>
+                        </svg>
+                        <span>Trust</span>
+                    </div>
+                    <div class="meter-wrapper">
+                        <svg viewBox="0 0 36 36" class="circular-chart orange">
+                            <path class="circle-bg"
+                                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" id="respect-circle" stroke-dasharray="0, 100"
+                                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <text x="18" y="20.35" class="percentage" id="respect-text">0%</text>
+                        </svg>
+                        <span>Respect</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. VISUAL KNOWLEDGE GRAPH (Bottom Left) -->
+            <div class="card bento-wide" id="graph-card" style="position:relative; overflow:hidden;">
+                <div
+                    style="display:flex; justify-content:space-between; align-items:center; z-index:10; position:relative;">
+                    <h2>🕸️ Knowledge Graph</h2>
+                    <span id="graph-status" style="font-size:0.8rem; color:#666;">Waiting for data...</span>
+                </div>
+
+                <!-- Graph Render Area -->
+                <div id="kg-network" style="width:100%; height:100%; position:absolute; top:0; left:0;"></div>
+
+                <!-- Memory Overlay -->
+                <div id="memory-overlay" class="glass-panel">
+                    <h3>Recent Triggers</h3>
+                    <div id="memory-feed" class="memory-list"></div>
+                </div>
+            </div>
+
+            <!-- 5. INTERNAL STATE (Bottom Right) -->
+            <div class="card bento-wide" id="thought-card">
+                <h2>💭 Internal State</h2>
+                <div style="display:flex; gap:10px;">
+                    <div style="flex:1; height:180px; position:relative;">
+                        <canvas id="strategyChart"></canvas>
+                    </div>
+                    <div style="flex:1; overflow-y:auto; max-height:180px;">
+                        <p id="inner-thought" class="typing-effect">Waiting for input...</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

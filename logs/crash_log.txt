@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "C:\Users\senth\Downloads\framework\debug_crash.py", line 5, in <module>
+    from main import GameEngine
+  File "C:\Users\senth\Downloads\framework\main.py", line 8, in <module>
+    from graph import build_graph
+  File "C:\Users\senth\Downloads\framework\graph.py", line 5, in <module>
+    from motivational import motivational_update_node
+  File "C:\Users\senth\Downloads\framework\motivational.py", line 9, in <module>
+    DEFAULT_MOTIVATIONAL = MotivationalState(
+        needs=CoreNeeds(belonging=0.5, autonomy=0.5, security=0.5, competence=0.5, novelty=0.5),
+    ...<16 lines>...
+        active_strategy="neutral"
+    )
+  File "C:\Users\senth\AppData\Roaming\Python\Python313\site-packages\pydantic\main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for MotivationalState
+emotional_state
+  Field required [type=missing, input_value={'needs': CoreNeeds(belon...ve_strategy': 'neutral'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+cognitive_state
+  Field required [type=missing, input_value={'needs': CoreNeeds(belon...ve_strategy': 'neutral'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing

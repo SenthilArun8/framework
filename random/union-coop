@@ -1,0 +1,65 @@
+Phase,Description,Key Technologies & Skills Demonstrated
+1. Data Acquisition & Pre-processing,"Use OSM/Overpass API (which you list as a skill) to pull road network data for a city (e.g., Kitchener-Waterloo). Use GeoPandas to clean, filter, and structure the data into standardized nodes (intersections) and relationships (road segments).","Python, GeoPandas, OSM/Overpass API, ETL"
+2. Graph Modeling & Loading,"Load the processed GeoData into Neo4j. Model the network using nodes for intersections/endpoints and weighted relationships for road segments (weights = travel time, distance, or even an ML-predicted traffic factor).","Neo4j, Cypher, Spatial Data Modeling"
+3. Advanced Graph Analysis (GDS),Apply advanced algorithms from the Neo4j GDS library:,"Neo4j GDS Library, Graph Algorithms"
+,"a. Centrality Analysis: Run Betweenness Centrality to identify critical intersections that, if blocked, cause the most network delay.",Vulnerability/Bottleneck Identification
+,"b. Pathfinding: Use Dijkstra's or A* to find optimal routes between key points (e.g., hospital, fire station, major employment center).",Logistics/Optimization
+4. Visualization,"Output the results (e.g., the top 10 most critical nodes) and visualize them back onto a map using Python/Folium or a standard GIS tool (ArcGIS/QGIS).","Data Visualization, QGIS/ArcGIS, GeoJSON/Python"
+
+Project Title: Urban Transportation Network Resilience Analysis using Neo4j GDS
+Objective
+To model a real-world urban road network using a graph database (Neo4j) and use advanced Graph Data Science (GDS) algorithms to identify critical choke points (vulnerability) and measure the network's efficiency and resilience under various hypothetical stress scenarios (e.g., road closures, accidents).
+
+Phase 1: Data Engineering & Graph Modeling (Python + GeoPandas + Cypher)
+This phase leverages your existing Python and GeoPandas skills to prepare the data for the graph database.
+
+1. Data Acquisition
+Source: Use the OSMnx Python library (which uses the Overpass API) to download the drivable road network for a specific study area (e.g., the Region of Waterloo, where you are currently working).
+
+Output: The OSMnx function graph_to_gdfs will output two GeoDataFrames:
+
+Nodes: Intersections (OSM nodes) with geometry (Lat/Lon) and unique IDs.
+
+Relationships: Road segments (OSM ways) with attributes like length, maxspeed, oneway, and start/end node IDs.
+
+2. ETL (Extract, Transform, Load) to Neo4j
+Modeling: Translate the GeoDataFrames into a Labeled Property Graph (LPG) model:
+
+Nodes: Label them :Intersection or :POI (Points of Interest, like hospitals, fire stations, or your affordable housing sites). Store the OSM ID and Geo-Coordinates (as a Neo4j Spatial Point property).
+
+Relationships: Label them :ROAD_SEGMENT. These are directional relationships (e.g., (a)-[:ROAD_SEGMENT {length: 100, max_speed: 60}]->(b)). The relationship property length (in meters) will serve as the weight for routing.
+
+Loading: Use the Neo4j Python driver (py2neo or graphdatascience client) to connect to your Neo4j instance and execute Cypher queries to load the data efficiently.
+
+Phase 2: Core Network Analysis (Neo4j Graph Data Science)
+This phase showcases your expertise in applied GDS algorithms, the core value proposition of this project.
+
+1. Criticality/Vulnerability Analysis (Betweenness Centrality)
+Algorithm: Run the Betweenness Centrality algorithm from the Neo4j GDS library.
+
+This algorithm calculates how many times a given node (intersection) lies on the shortest path between every other pair of nodes in the network.
+
+Interpretation: Nodes with the highest Betweenness Centrality score are the most critical. If these intersections fail (e.g., due to an accident or construction), they disrupt the largest number of possible journeys, identifying vulnerabilities and bottlenecks in the network.
+
+Deliverable: A ranked list of the top 10 most critical intersections in the city.
+
+2. Efficiency & Access Analysis (Shortest Path & Closeness Centrality)
+Algorithm: Run a Pathfinding Algorithm (like Dijkstra's or A* Search) between critical Points of Interest (POIs) such as the city hall, the largest hospital, and a proposed affordable housing site.
+
+Scenario: Simulate a "disruption" by temporarily removing a high-centrality road segment (effectively increasing its weight to infinity). Re-run the pathfinding query to find the new, slower route and calculate the percentage increase in travel distance/time.
+
+Interpretation: This quantifies the network's resilience—how much the system's performance degrades when a critical part fails.
+
+Algorithm: Run Closeness Centrality to find which intersections are, on average, closest to all other intersections in the network. This identifies the most centrally accessible locations.
+
+Phase 3: Visualization & Storytelling (Python + GIS)
+This phase turns the database results into compelling geospatial evidence.
+
+1. Geospatial Integration
+Export: Write a Cypher query to retrieve the top 10 critical intersections (Nodes) and their centrality scores, along with their coordinates.
+
+Visualization: Use Python (e.g., Folium, Plotly, or Matplotlib) with GeoPandas to create a web map:
+
+Display the entire road network.
+
+Overlay the critical intersections as points, styling them with a graduated color scale or size proportional to their Betweenness Centrality score (e.g., largest/reddest points are the biggest choke points).

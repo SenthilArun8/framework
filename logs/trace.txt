@@ -1,0 +1,108 @@
+Traceback (most 
+recent call last):
+At line:1 char:1
++ C:/Python313/python
+.exe c:/Users/senth/D
+ownloads/framework/ma
+in.py >  ...
++ ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (Traceba   
+ ck (most recent     
+call last)::Stri    
+ng) [], RemoteEx    
+ception
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+  File "c:\Users\sent
+h\Downloads\framework
+\main.py", line 6, 
+in <module>
+    from graph 
+import build_graph
+  File "c:\Users\sent
+h\Downloads\framework
+\graph.py", line 4, 
+in <module>
+    from brain 
+import 
+retrieve_node, 
+subconscious_node, 
+delta_node, 
+generate_node
+  File "c:\Users\sent
+h\Downloads\framework
+\brain.py", line 11, 
+in <module>
+    llm = ChatGoogleG
+enerativeAI(
+        model="gemini
+-2.5-flash",
+        google_api_ke
+y=os.getenv("GOOGLE_A
+PI_KEY"),
+        
+temperature=0.7
+    )
+  File "C:\Users\sent
+h\AppData\Roaming\Pyt
+hon\Python313\site-pa
+ckages\langchain_goog
+le_genai\chat_models.
+py", line 2195, in 
+__init__
+    super().__init__(
+**kwargs)
+    ~~~~~~~~~~~~~~~~^
+^^^^^^^^^
+  File "C:\Users\sent
+h\AppData\Roaming\Pyt
+hon\Python313\site-pa
+ckages\langchain_core
+\load\serializable.py
+", line 116, in 
+__init__
+    super().__init__(
+*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^
+^^^^^^^^^^^^^^^^
+  File "C:\Users\sent
+h\AppData\Roaming\Pyt
+hon\Python313\site-pa
+ckages\pydantic\main.
+py", line 214, in 
+__init__
+    validated_self = 
+self.__pydantic_valid
+ator__.validate_pytho
+n(data, 
+self_instance=self)
+pydantic_core._pydant
+ic_core.ValidationErr
+or: 1 validation 
+error for ChatGoogleG
+enerativeAI
+  Value error, API 
+key required for 
+Gemini Developer 
+API. Provide api_key 
+parameter or set GOOG
+LE_API_KEY/GEMINI_API
+_KEY environment 
+variable. 
+[type=value_error, in
+put_value={'model': '
+gemini-2.5-fla...0.7,
+ 'model_kwargs': 
+{}}, input_type=dict]
+    For further 
+information visit htt
+ps://errors.pydantic.
+dev/2.10/v/value_erro
+r
