@@ -1,6 +1,10 @@
 # Environment variables
 .env
 
+# rpm file
+*.rpm
+neo4j-2025.10.1/
+
 # Python
 __pycache__/
 *.py[cod]
