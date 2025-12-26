@@ -1,0 +1,14 @@
+[
+    {
+        "id": "fac_guard",
+        "name": "The Guardians",
+        "description": "Protectors of the hub.",
+        "members": []
+    },
+    {
+        "id": "fac_sci",
+        "name": "Science Division",
+        "description": "Seekers of truth.",
+        "members": []
+    }
+]

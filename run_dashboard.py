@@ -3,22 +3,84 @@ import socketserver
 import os
 import json
 import sys
+import queue
+import time
 
-# Import Game Engine
-# Ensure current dir is in path
+# Ensure src is in path
 sys.path.append(os.getcwd())
-sys.path.append(os.path.join(os.getcwd(), "src")) # Safety add
+sys.path.append(os.path.join(os.getcwd(), "src"))
+
 from main import GameEngine
 
 PORT = 8000
 DIRECTORY = "dashboard"
 
-# Initialize Game Engine
+# Threading Server to handle concurrent SSE connections
+class ThreadingHTTPServer(socketserver.ThreadingTCPServer):
+    allow_reuse_address = True
+
+# Global set of client queues for SSE
+clients = set()
+
+def broadcast_event(data):
+    """Callback function to push data to all connected SSE clients."""
+    print(f"[SSE] Broadcasting update to {len(clients)} clients.")
+    payload = f"data: {json.dumps(data)}\n\n"
+    for q in list(clients):
+        q.put(payload)
+
+# Initialize Game Engine and Hook Callback
 engine = GameEngine()
+engine.set_dashboard_callback(broadcast_event)
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=DIRECTORY, **kwargs)
+
+    def do_GET(self):
+        if self.path == "/events":
+            self.handle_sse()
+        else:
+            # Disable caching for JSON files if still requested
+            if self.path.endswith('.json'):
+                self.send_header('Cache-Control', 'no-store, no-cache, must-revalidate')
+            super().do_GET()
+
+    def handle_sse(self):
+        self.send_response(200)
+        self.send_header('Content-type', 'text/event-stream')
+        self.send_header('Cache-Control', 'no-cache')
+        self.send_header('Connection', 'keep-alive')
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.end_headers()
+
+        # Create a queue for this client
+        q = queue.Queue()
+        clients.add(q)
+        print(f"[SSE] Client connected. Total clients: {len(clients)}")
+
+        try:
+            # Send initial state immediately
+            initial_state = {
+                "profile": engine.profile.model_dump(),
+                "chat_log": engine.chat_history,
+                "motivational": engine.motivational.model_dump(),
+                # Add other fields if needed for initial load, or rely on next update
+                "knowledge_graph": engine.kg.get_viz_data() if engine.kg else {}
+            }
+            self.wfile.write(f"data: {json.dumps(initial_state)}\n\n".encode('utf-8'))
+            self.wfile.flush()
+
+            while True:
+                msg = q.get()
+                self.wfile.write(msg.encode('utf-8'))
+                self.wfile.flush()
+        except (BrokenPipeError, ConnectionResetError):
+            print("[SSE] Client disconnected.")
+        except Exception as e:
+            print(f"[SSE] Error: {e}")
+        finally:
+            clients.remove(q)
 
     def do_POST(self):
         if self.path == "/chat":
@@ -28,42 +90,27 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 data = json.loads(post_data.decode('utf-8'))
                 user_msg = data.get("message", "")
                 
-                print(f"[DEBUG] API Chat Request received: {user_msg}")
-                print(f"[DEBUG] Starting process_turn...")
-                
+                print(f"[DEBUG] API Chat Request: {user_msg}")
                 result = engine.process_turn(user_msg)
-                print(f"[DEBUG] process_turn returned: {type(result)} - {result}")
                 
-                if result is None or result == (None, None):
-                    print(f"[ERROR] process_turn returned None!")
-                    reply = "I'm having trouble processing that right now."
-                    analysis = {}
+                if result and result[0]:
+                    reply, _ = result
                 else:
-                    reply, analysis = result
+                    reply = "Processing error."
                 
-                print(f"[DEBUG] Reply: {reply[:50] if reply else 'None'}")
-                
-                # Send Response
                 self.send_response(200)
                 self.send_header('Content-type', 'application/json')
                 self.end_headers()
-                response = {"reply": reply, "status": "ok"}
-                self.wfile.write(json.dumps(response).encode('utf-8'))
+                self.wfile.write(json.dumps({"reply": reply, "status": "ok"}).encode('utf-8'))
                 
             except Exception as e:
-                import traceback
                 print(f"[ERROR] API Error: {e}")
-                print(f"[ERROR] Traceback:\n{traceback.format_exc()}")
-                self.send_response(500)
-                self.send_header('Content-type', 'application/json')
-                self.end_headers()
-                error_response = {"error": str(e), "status": "error"}
-                self.wfile.write(json.dumps(error_response).encode('utf-8'))
+                self.send_error(500, str(e))
+
         elif self.path == "/reset_character":
             try:
                 print("[DEBUG] Received Reset Request")
                 msg = engine.reset_game()
-                
                 self.send_response(200)
                 self.send_header('Content-type', 'application/json')
                 self.end_headers()
@@ -78,25 +125,13 @@ if __name__ == "__main__":
     if not os.path.exists(DIRECTORY):
         os.makedirs(DIRECTORY)
 
-    # Use Reusable Address to avoid Port in Use errors during rapid restarts
-    socketserver.TCPServer.allow_reuse_address = True
-    
+    # Use ThreadingHTTPServer instead of TCPServer
     try:
-        with socketserver.TCPServer(("", PORT), Handler) as httpd:
-            print(f"Serving Dashboard & API at http://localhost:{PORT}")
-            print("[DEBUG] About to call serve_forever()...")
+        with ThreadingHTTPServer(("", PORT), Handler) as httpd:
+            print(f"Serving Dashboard & SSE at http://localhost:{PORT}")
             try:
                 httpd.serve_forever()
             except KeyboardInterrupt:
-                print("[DEBUG] Keyboard interrupt received")
-            except Exception as e:
-                print(f"[ERROR] serve_forever() error: {e}")
-                import traceback
-                traceback.print_exc()
-            finally:
-                httpd.server_close()
-                print("Server stopped.")
+                print("\nServer stopped by user.")
     except Exception as e:
-        print(f"[ERROR] Failed to start server: {e}")
-        import traceback
-        traceback.print_exc()
+        print(f"[ERROR] Server failed: {e}")

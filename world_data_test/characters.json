@@ -1,0 +1,32 @@
+[
+  {
+    "id": "char_a",
+    "profile_path": "data/characters/char_a.json",
+    "location_id": "location_a",
+    "state": "idle",
+    "active_goals": [
+      "Explore the world",
+      "Make friends"
+    ],
+    "current_plan": null,
+    "destination": null,
+    "interacting_with": [],
+    "last_action_tick": 0,
+    "is_active": true
+  },
+  {
+    "id": "char_b",
+    "profile_path": "data/characters/char_b.json",
+    "location_id": "location_b",
+    "state": "idle",
+    "active_goals": [
+      "Become wealthy",
+      "Expand trade routes"
+    ],
+    "current_plan": null,
+    "destination": null,
+    "interacting_with": [],
+    "last_action_tick": 0,
+    "is_active": true
+  }
+]

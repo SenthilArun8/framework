@@ -1,0 +1,98 @@
+[
+  {
+    "id": "village_alpha",
+    "name": "Village Alpha",
+    "type": "city",
+    "coordinates": [
+      10.0,
+      20.0
+    ],
+    "occupants": [
+      "char_a"
+    ],
+    "active_events": [],
+    "description": "A peaceful mountain village with hot springs",
+    "atmosphere": "peaceful",
+    "resources": {},
+    "faction_control": null,
+    "connected_to": [
+      "village_beta",
+      "forest_clearing"
+    ],
+    "travel_times": {
+      "village_beta": 10,
+      "forest_clearing": 5
+    }
+  },
+  {
+    "id": "village_beta",
+    "name": "Village Beta",
+    "type": "city",
+    "coordinates": [
+      30.0,
+      40.0
+    ],
+    "occupants": [
+      "char_b"
+    ],
+    "active_events": [],
+    "description": "A bustling trade hub with colorful markets",
+    "atmosphere": "energetic",
+    "resources": {},
+    "faction_control": null,
+    "connected_to": [
+      "village_alpha",
+      "ancient_ruins"
+    ],
+    "travel_times": {
+      "village_alpha": 10,
+      "ancient_ruins": 15
+    }
+  },
+  {
+    "id": "forest_clearing",
+    "name": "Forest Clearing",
+    "type": "wilderness",
+    "coordinates": [
+      5.0,
+      15.0
+    ],
+    "occupants": [],
+    "active_events": [],
+    "description": "A quiet glade surrounded by ancient trees",
+    "atmosphere": "mysterious",
+    "resources": {},
+    "faction_control": null,
+    "connected_to": [
+      "village_alpha",
+      "ancient_ruins"
+    ],
+    "travel_times": {
+      "village_alpha": 5,
+      "ancient_ruins": 8
+    }
+  },
+  {
+    "id": "ancient_ruins",
+    "name": "Ancient Ruins",
+    "type": "dungeon",
+    "coordinates": [
+      35.0,
+      30.0
+    ],
+    "occupants": [],
+    "active_events": [],
+    "description": "Crumbling stone structures overgrown with vines",
+    "atmosphere": "eerie",
+    "resources": {},
+    "faction_control": null,
+    "connected_to": [
+      "village_beta",
+      "forest_clearing"
+    ],
+    "travel_times": {
+      "village_beta": 15,
+      "forest_clearing": 8
+    }
+  }
+]

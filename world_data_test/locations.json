@@ -1,0 +1,48 @@
+[
+  {
+    "id": "location_a",
+    "name": "Village Alpha",
+    "type": "city",
+    "coordinates": [
+      10.0,
+      20.0
+    ],
+    "occupants": [
+      "char_a"
+    ],
+    "active_events": [],
+    "description": "A peaceful village nestled in the mountains",
+    "atmosphere": "neutral",
+    "resources": {},
+    "faction_control": null,
+    "connected_to": [
+      "location_b"
+    ],
+    "travel_times": {
+      "location_b": 10
+    }
+  },
+  {
+    "id": "location_b",
+    "name": "Village Beta",
+    "type": "city",
+    "coordinates": [
+      30.0,
+      40.0
+    ],
+    "occupants": [
+      "char_b"
+    ],
+    "active_events": [],
+    "description": "A bustling trade hub",
+    "atmosphere": "neutral",
+    "resources": {},
+    "faction_control": null,
+    "connected_to": [
+      "location_a"
+    ],
+    "travel_times": {
+      "location_a": 10
+    }
+  }
+]

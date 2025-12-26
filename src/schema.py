@@ -12,6 +12,7 @@ class MemoryFragment(BaseModel):
     time_period: str  # e.g., "Childhood", "The War", "2023"
     description: str  # The actual event content
     emotional_tags: List[str]  # e.g., ["fear", "abandonment"]
+    cognitive_tags: List[str] = [] # e.g., ["trust", "betrayal", "empire"]
     importance_score: float = Field(..., ge=0, le=1) # 1.0 = Core Trauma
     # Phase 11 additions
     source_entity: str = Field(default="Unknown", description="Who provided this information?")
@@ -100,7 +101,7 @@ class EmotionalState(BaseModel):
 class CognitiveState(BaseModel):
     cognitive_load: float       # 0 to 1
     dissociation: float         # 0 to 1
-    focus_fragility: float      # Legacy Trait ref
+    #focus_fragility: float      # Legacy Trait ref
 
 class AttachmentSystem(BaseModel):
     style: Literal["secure", "anxious", "avoidant", "disorganized"]
@@ -142,6 +143,14 @@ class MotivationalState(BaseModel):
         if isinstance(v, str):
             return {v: 1.0}
         return v
+
+class CognitiveFrame(BaseModel):
+    beliefs_held: List[str]
+    beliefs_rejected: List[str]
+    emotional_state: Dict[str, float]
+    behavioral_constraints: List[str]
+    confidence_level: float = Field(default=0.5, ge=0.0, le=1.0)
+    linked_memories: List[str] = [] # Memory descriptions influencing this belief
 
 # --- PERSISTENCE HELPERS ---
 

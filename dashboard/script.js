@@ -1,25 +1,36 @@
-const STATE_URL = 'live_state.json';
-let lastState = null;
+// --- SERVER SENT EVENTS (Optimization Phase 24) ---
+function startSSE() {
+    const statusSpan = document.getElementById('conn-status');
 
-async function fetchState() {
-    try {
-        const response = await fetch(STATE_URL + '?t=' + Date.now()); // Prevent caching
-        if (!response.ok) throw new Error("Network response was not ok");
-        const state = await response.json();
+    console.log("Starting EventSource connection...");
+    const evtSource = new EventSource('/events');
 
-        document.getElementById('conn-status').innerText = "LIVE";
-        document.getElementById('conn-status').classList.add('connected');
+    evtSource.onopen = function () {
+        statusSpan.innerText = "LIVE (STREAM)";
+        statusSpan.classList.add('connected');
+    };
 
-        updateUI(state);
-    } catch (e) {
-        document.getElementById('conn-status').innerText = "DISCONNECTED";
-        document.getElementById('conn-status').classList.remove('connected');
-        console.log("Waiting for server...", e);
-    }
+    evtSource.onmessage = function (event) {
+        try {
+            const state = JSON.parse(event.data);
+            console.log("SSE State Received:", state); // Debug Log
+            if (state) updateUI(state);
+        } catch (e) {
+            console.error("Error parsing SSE data:", e);
+        }
+    };
+
+    evtSource.onerror = function (err) {
+        console.error("EventSource failed:", err);
+        statusSpan.innerText = "RECONNECTING";
+        statusSpan.classList.remove('connected');
+    };
 }
 
 function updateUI(state) {
     if (!state) return;
+
+
 
     // 1. Psyche
     document.getElementById('mood-val').innerText = state.profile.current_mood;
@@ -58,11 +69,13 @@ function updateUI(state) {
     }
 
     // 3. Relationships (Robust Lookup)
+    console.log("Relationships:", state.profile.relationships);
     let rel = state.profile.relationships['User_123'];
     if (!rel) {
         const keys = Object.keys(state.profile.relationships);
         if (keys.length > 0) rel = state.profile.relationships[keys[0]];
     }
+    console.log("Selected Relationship:", rel);
 
     if (rel) {
         setMeter('trust', rel.trust_level);
@@ -118,8 +131,8 @@ function setMeter(type, val) {
     text.innerText = Math.round(val) + "%";
 }
 
-// Poll every 500ms
-setInterval(fetchState, 500);
+// Initialize SSE
+startSSE();
 
 // --- CHAT INTERACTION ---
 const inputField = document.getElementById('user-input');
@@ -148,8 +161,7 @@ async function sendMessage() {
         });
         const data = await response.json();
 
-        // Re-fetch state immediately
-        setTimeout(fetchState, 100);
+        // State updates via SSE automatically
 
     } catch (e) {
         console.error("Chat Error:", e);

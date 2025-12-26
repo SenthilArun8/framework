@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous World Viewer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Leaflet for Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>World Engine <span id="clock">00:00</span></h1>
+            <div class="controls">
+                <button onclick="startSim()">▶ Start</button>
+                <button onclick="stopSim()">⏸ Pause</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="map-container"></div>
+            <aside id="sidebar">
+                <div class="panel" id="event-feed">
+                    <h3>Live Events</h3>
+                    <ul id="feed-list"></ul>
+                </div>
+                <div class="panel" id="entity-list">
+                    <h3>Active Entities</h3>
+                    <ul id="char-list"></ul>
+                </div>
+            </aside>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

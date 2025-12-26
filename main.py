@@ -103,6 +103,11 @@ class GameEngine:
             "subconscious": "System Initialized.",
             "graph_logs": []
         })
+        
+        self.dashboard_callback = None
+
+    def set_dashboard_callback(self, callback):
+        self.dashboard_callback = callback
 
     def process_turn(self, user_input):
         if not self.profile: return None, None
@@ -254,6 +259,14 @@ class GameEngine:
             "motivational": analysis.get("motivational").model_dump() if analysis.get("motivational") else None,
             "knowledge_graph": viz_data
         }
+        
+        # Callback for SSE (Phase 21 Optimization)
+        if hasattr(self, 'dashboard_callback') and self.dashboard_callback:
+            try:
+                self.dashboard_callback(state)
+            except Exception as e:
+                print(f"Callback Error: {e}")
+
         try:
              if not os.path.exists("dashboard"): os.makedirs("dashboard")
              

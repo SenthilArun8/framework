@@ -1,0 +1,21 @@
+[
+    {
+        "id": "loc_hub",
+        "name": "Central Hub",
+        "description": "The bustling center of activity.",
+        "type": "Hub",
+        "resources": [
+            "Information",
+            "Power"
+        ]
+    },
+    {
+        "id": "loc_lab",
+        "name": "Research Lab",
+        "description": "A quiet facility for advanced study.",
+        "type": "Lab",
+        "resources": [
+            "Data"
+        ]
+    }
+]

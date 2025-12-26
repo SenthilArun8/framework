@@ -1,0 +1,40 @@
+[
+  {
+    "id": "faction_alpha",
+    "name": "Alpha Clan",
+    "type": "tribe",
+    "description": "Peaceful mountain dwellers",
+    "ideology": "",
+    "power_level": 40.0,
+    "resources": {},
+    "controlled_locations": [
+      "village_alpha"
+    ],
+    "members": [],
+    "leader_id": null,
+    "relations": {
+      "faction_beta": "friendly"
+    },
+    "goals": [],
+    "is_active": true
+  },
+  {
+    "id": "faction_beta",
+    "name": "Beta Traders",
+    "type": "guild",
+    "description": "Wealthy merchant guild",
+    "ideology": "",
+    "power_level": 60.0,
+    "resources": {},
+    "controlled_locations": [
+      "village_beta"
+    ],
+    "members": [],
+    "leader_id": null,
+    "relations": {
+      "faction_alpha": "friendly"
+    },
+    "goals": [],
+    "is_active": true
+  }
+]

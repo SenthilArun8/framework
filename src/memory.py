@@ -35,6 +35,7 @@ class MemoryStore:
                     "id": frag.id,
                     "time_period": frag.time_period,
                     "emotional_tags": ", ".join(frag.emotional_tags),
+                    "cognitive_tags": ", ".join(frag.cognitive_tags),
                     "importance_score": frag.importance_score
                 }
             )
@@ -76,18 +77,21 @@ class MemoryStore:
         memories = []
         
         for doc in results:
-            tags = doc.metadata.get("emotional_tags", "").split(", ")
+            emo_tags = doc.metadata.get("emotional_tags", "").split(", ")
+            cog_tags = doc.metadata.get("cognitive_tags", "").split(", ")
             
             # Post-filter for tags (naive "any match" logic)
             if filter_tags:
-                if not any(t in tags for t in filter_tags):
+                all_tags = emo_tags + cog_tags
+                if not any(t in all_tags for t in filter_tags):
                     continue
             
             mem = MemoryFragment(
                 id=doc.metadata.get("id"),
                 time_period=doc.metadata.get("time_period"),
                 description=doc.page_content,
-                emotional_tags=[t for t in tags if t], 
+                emotional_tags=[t for t in emo_tags if t],
+                cognitive_tags=[t for t in cog_tags if t], 
                 importance_score=float(doc.metadata.get("importance_score", 0.0))
             )
             memories.append(mem)

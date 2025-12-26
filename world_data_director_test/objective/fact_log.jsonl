@@ -1,0 +1,374 @@
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_10", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_11", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_10", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_11", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_22", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_23", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_10", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_11", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_12", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_13", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_14", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_15", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "village_beta"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_16", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_10", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_11", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_22", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_23", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_24", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_25", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_b_21_26", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_27", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "ancient_ruins"}, "observers": []}
+{"fact_id": "character_moved_char_a_41_28", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "ancient_ruins", "destination": "village_beta"}, "observers": ["char_b"]}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_10", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_11", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_10", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_11", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_22", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_23", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_10", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_11", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_12", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_13", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_14", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_15", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "village_beta"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_16", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_10", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_11", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_22", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_23", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_24", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_25", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_b_21_26", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_27", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "ancient_ruins"}, "observers": []}
+{"fact_id": "character_moved_char_a_41_28", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "ancient_ruins", "destination": "village_beta"}, "observers": ["char_b"]}
+{"fact_id": "character_spawned_char_a_0_92", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_93", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_10", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_11", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_10", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_11", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_22", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_23", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_10", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_11", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_12", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_13", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_14", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_15", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "village_beta"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_16", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_10", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_11", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_22", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_23", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_24", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_25", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_b_21_26", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_27", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "ancient_ruins"}, "observers": []}
+{"fact_id": "character_moved_char_a_41_28", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "ancient_ruins", "destination": "village_beta"}, "observers": ["char_b"]}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_10", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_11", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_10", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_11", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_22", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_23", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_10", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_11", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_12", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_13", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_14", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_15", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "village_beta"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_16", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_0", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_1", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_2", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_3", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_4", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_21_5", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_a"]}
+{"fact_id": "character_moved_char_a_41_6", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": ["char_b"]}
+{"fact_id": "character_moved_char_b_41_7", "tick": 41, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "forest_clearing", "destination": "village_alpha"}, "observers": ["char_a"]}
+{"fact_id": "character_spawned_char_a_0_10", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_11", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_22", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_23", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_11_24", "tick": 11, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "village_alpha", "destination": "forest_clearing"}, "observers": []}
+{"fact_id": "character_moved_char_b_11_25", "tick": 11, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_beta", "destination": "village_alpha"}, "observers": []}
+{"fact_id": "character_moved_char_b_21_26", "tick": 21, "fact_type": "character_moved", "subject": "char_b", "data": {"from": "village_alpha", "destination": "village_beta"}, "observers": []}
+{"fact_id": "character_moved_char_a_21_27", "tick": 21, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "forest_clearing", "destination": "ancient_ruins"}, "observers": []}
+{"fact_id": "character_moved_char_a_41_28", "tick": 41, "fact_type": "character_moved", "subject": "char_a", "data": {"from": "ancient_ruins", "destination": "village_beta"}, "observers": ["char_b"]}
+{"fact_id": "character_spawned_char_a_0_92", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_93", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}
+{"fact_id": "character_spawned_char_a_0_186", "tick": 0, "fact_type": "character_spawned", "subject": "char_a", "data": {"location": "village_alpha"}, "observers": []}
+{"fact_id": "character_spawned_char_b_0_187", "tick": 0, "fact_type": "character_spawned", "subject": "char_b", "data": {"location": "village_beta"}, "observers": []}

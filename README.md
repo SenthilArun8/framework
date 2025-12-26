@@ -1,370 +1,147 @@
-# Living Character AI System
+# Living Character AI Framework
 
-An advanced AI system that creates psychologically evolving characters with dynamic personalities, emotions, and relationships. Built with LangChain, Google Gemini, ChromaDB vector storage, Neo4j knowledge graphs, and a real-time web dashboard.
+A sophisticated cognitive architecture for creating **dynamic, psychologically complex AI characters** that evolve over time. This framework goes beyond simple roleplay by simulating a character's internal drives, emotional needs, subconscious thoughts, and deep-seated memories.
 
----
-
-## 🎭 What Does This Do?
-
-This system simulates a **living, breathing AI character** (named "Elias" - a medic/survivor) whose personality, mood, values, and relationships **evolve realistically** based on conversations. Unlike traditional chatbots that maintain static personalities, this character has:
-
-- **Dynamic Psychology**: Values and beliefs that shift slowly based on interactions (simulating neuroplasticity)
-- **Emotional Memory System**: Past experiences stored in a vector database, retrieved based on emotional resonance
-- **Relationship Tracking**: Trust and respect levels that change based on user behavior
-- **Knowledge Graph Integration**: Connections between concepts (e.g., "Elias -[HATES]-> Empire -[DESTROYED]-> Home")
-- **Real-time Dashboard**: Web interface showing the character's internal state as it changes
+It features a **real-time observability dashboard** that allows you to watch the character's "brain" work—seeing their active memories, shifting values, and emotional state as they interact with you.
 
 ---
 
-## 🏗️ System Architecture
+## 🧠 Core Architecture
 
-### **Core Components**
+The system is built on **LangGraph** with a 7-stage cognitive pipeline that runs for every user interaction:
 
-#### 1. **Brain Pipeline** (`brain.py`)
-A 4-stage LangGraph processing pipeline powered by Google Gemini:
+### 1. **Retrieve Node** (Contextual Grounding)
+-   **Emotional Query Expansion**: The system analyzes the *emotional themes* of your message (e.g., "Abandonment", "Warmth") rather than just keywords.
+-   **Vector Search**: Retrieves relevant episodic memories from **ChromaDB**.
+-   **Semantic Graph RAG**: If specific entities are mentioned, it queries **Neo4j** to find the character's "opinion paths" (e.g., `Elias -[HATES]-> Empire -[DESTROYED]-> Home`).
 
-- **Retrieve Node**: Analyzes user input for emotional themes, retrieves relevant memories from vector DB
-- **Subconscious Node**: Internal reflection considering memories, values, and current mood
-- **Delta Node**: Calculates psychological changes (values, mood, trust) with realistic small increments
-- **Generate Node**: Produces character response based on updated psychological state
+### 2. **Motivational Node** (The "Id")
+-   **Needs System**: Tracks 5 core needs (Belonging, Autonomy, Security, Competence, Novelty) which decay over time or react to intent.
+-   **Intent Analysis**: An internal LLM classifies your intent (SUPPORT, CRITICISM, THREAT, etc.) to adjust emotional state.
+-   **Strategy Blending**: Calculates "Pressures" (Stress, Attachment, Conflict) to create a **mixed behavioral strategy** (e.g., `60% Defensive + 40% Fragmented`).
+-   **Cognitive Load**: Tracks mental capacity; high complexity inputs increase load, causing deeper dissociation or fragility.
 
-#### 2. **Memory System** (`memory.py`)
-- **ChromaDB Vector Store**: Stores character backstory as semantic embeddings
-- **Google Embeddings**: `text-embedding-004` model for semantic similarity
-- **Emotion-Based Retrieval**: Finds memories by emotional themes, not just keywords
-- **Persistent Storage**: `./chroma_db` directory maintains memory across sessions
+### 3. **Subconscious Node** (The "Inner Voice")
+-   Generates a raw, unfiltered internal monologue.
+-   Reflects on the input without social constraints.
+-   Decides if the user is trustworthy or manipulating reality ("Hypothesis Testing").
 
-#### 3. **Knowledge Graph** (`knowledge_graph.py`)
-- **Neo4j Graph Database**: Stores relationships between concepts and entities
-- **Dynamic Opinion Mapping**: "Why does Elias hate the Empire?" → Traverses: `Elias -[HATES]-> Empire -[DESTROYED]-> Home`
-- **Trust Evolution**: Updates relationship edges dynamically
-- **Visualization Data**: Exports nodes/edges for dashboard rendering
+### 4. **Delta Node** (Neuroplasticity)
+-   **Psychological Evolution**: Updates the character's **Mood**, **Core Values**, and **Relationship Metrics** (Trust/Respect).
+-   **Scaffolding Logic**: If Cognitive Load is high, the character becomes more susceptible to external structure (compliant). If low, they assert **Autonomy**.
+-   **Trust Damping**: Trust is harder to gain as it gets higher, but easily lost.
 
-#### 4. **Data Models** (`schema.py`)
-- `PsychologicalProfile`: Character's mutable state (mood, values, goals, relationships)
-- `MemoryFragment`: Immutable backstory chunks with emotional tags
-- `PersonalityDelta`: Changes to apply after each interaction
-- `EmotionalQuery`: Structured output for memory retrieval
+### 5. **Learning Node** (Memory Formation)
+-   Analyzes the interaction to decide if it is **significant enough** to form a new permanent memory.
+-   If meaningful, it commits a new memory fragment to the Vector DB.
 
-#### 5. **State Management** (`state.py`, `graph.py`)
-- **LangGraph StateGraph**: Chains the 4 brain nodes in sequence
-- **AgentState**: Tracks conversation, profile, memories, and internal thoughts
-- **Functional Pipeline**: `Retrieve → Subconscious → Delta → Generate`
+### 6. **Generate Node** (Expression)
+-   Produces the final spoken response.
+-   Follows the **Active Strategy** (e.g., "Be curt and defensive", "Stutter and dissociate") derived from the Motivational Node.
+-   Influenced by the Subconscious thought but not identical to it.
 
-#### 6. **Web Dashboard** (`dashboard/`, `run_dashboard.py`)
-- **Real-time HUD**: Live visualization of character's internal state
-- **Interactive Chat**: Send messages directly from the browser
-- **Bento Grid Layout**: Psyche profile, chat stream, trust/respect meters, knowledge graph visualization, subconscious thoughts
-- **Live Updates**: Polls `live_state.json` every 500ms for state changes
+### 7. **Persist Node** (Side Effects)
+-   Updates the **Neo4j Knowledge Graph** with new interaction events and relationship changes.
+-   Saves the `PsychologicalProfile` to `character.json`.
+
+---
+
+## 💾 Dual-Memory System
+
+1.  **Episodic Memory (ChromaDB)**
+    *   Stores "backstory" and raw interaction logs.
+    *   Retrieved via semantic similarity (embeddings).
+    *   *Good for:* Vague feelings, specific past events ("The drone crash").
+
+2.  **Semantic Memory (Neo4j)**
+    *   Stores structured relationships and facts.
+    *   *Good for:* Concrete opinions, social connections, and causality.
+    *   *Visualized:* In the dashboard as a force-directed graph.
+
+---
+
+## 🖥️ Real-Time Dashboard
+
+The framework runs a **Threading HTTP Server** (Port 8000) with **Server-Sent Events (SSE)** for zero-latency updates.
+
+**Key Visualizations:**
+-   **Psyche Panel**: Live bars for Mood, Values, and Needs.
+-   **Relationship Meters**: Circular gauges for Trust and Respect (User-specific).
+-   **Memory Feed**: Shows exactly which memories were triggered by the last message.
+-   **Inner Thought**: Displays the raw subconscious monologue.
+-   **Knowledge Graph**: Interactive visualization of the Neo4j database.
+-   **Strategy Radar**: A radar chart showing the current blend of behavioral strategies.
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 framework/
-├── main.py                   # CLI interface & game engine orchestration
-├── run_dashboard.py          # Web server for dashboard (http://localhost:8000)
-├── brain.py                  # 4-stage AI reasoning pipeline
-├── memory.py                 # Vector DB memory management
-├── knowledge_graph.py        # Neo4j graph operations
-├── schema.py                 # Pydantic data models
-├── state.py                  # LangGraph state definition
-├── graph.py                  # LangGraph workflow builder
-├── character.json            # Character's persistent psychological state
-├── requirements.txt          # Python dependencies
-├── .env                      # API keys and config
-├── chroma_db/                # ChromaDB persistent storage
+├── src/
+│   ├── brain.py          # Core LangGraph nodes (Retrieve, Subconscious, Delta, Generate, Learn, Persist)
+│   ├── motivational.py   # Emergent psychology (Needs, Intent Analysis, Strategy Blending)
+│   ├── memory.py         # ChromaDB wrapper
+│   ├── knowledge_graph.py# Neo4j driver & querying logic
+│   ├── graph.py          # StateGraph definition
+│   ├── schema.py         # Pydantic models (MemoryFragment, PsychologicalProfile, MotivationalState)
+│   └── state.py          # AgentState TypedDict
 ├── dashboard/
-│   ├── index.html            # Dashboard UI
-│   ├── style.css             # Styling
-│   ├── script.js             # Real-time updates & chat
-│   └── live_state.json       # Current character state (auto-generated)
-└── README.md                 # This file
+│   ├── index.html        # Dashboard UI
+│   └── script.js         # Frontend logic (SSE, Charts)
+├── data/
+│   ├── character.json    # Persistent profile state
+│   ├── chroma_db/        # Vector database files
+│   └── chat_history.json # Chat log
+├── run_dashboard.py      # Main Entry Point (HTTP Server + Chat API)
+└── main.py              # Game Engine & CLI logic
 ```
 
 ---
 
-## 🚀 Setup
+## 🚀 Getting Started
 
-### **Prerequisites**
-- Python 3.8+
-- Google API Key ([Get one here](https://makersuite.google.com/app/apikey))
-- Neo4j Database (Optional but recommended for knowledge graph features)
+### Prerequisites
 
-### **Installation**
+1.  **Python 3.10+**
+2.  **Google Gemini API Key**: Set `GOOGLE_API_KEY` in your environment or `.env` file.
+3.  **Neo4j** (Optional but recommended):
+    *   Set `NEO4J_URI`, `NEO4J_USER`, `NEO4J_PASSWORD` in `.env`.
+    *   Set `NEO4J_ENABLED=true`.
 
-1. **Install dependencies**:
-   ```powershell
-   pip install -r requirements.txt
-   ```
+### Installation
 
-2. **Set up environment variables**:
-   Create a `.env` file in the project root:
-   ```env
-   GOOGLE_API_KEY=your_google_api_key_here
-   NEO4J_URI=bolt://localhost:7687
-   NEO4J_USER=neo4j
-   NEO4J_PASSWORD=your_neo4j_password
-   ```
+```bash
+pip install -r requirements.txt
+```
 
-3. **Start Neo4j** (Optional):
-   ```powershell
-   # If using local Neo4j installation
-   neo4j console
-   ```
+### Running the System
 
----
+**1. Dashboard Mode (Recommended)**
+Start the server and UI:
+```bash
+python run_dashboard.py
+```
+*   Open `http://localhost:8000` in your browser.
+*   The dashboard will connect via SSE.
+*   Use the chat input at the bottom to interact.
 
-## 🎮 Usage
-
-### **Option 1: Command Line Interface**
-
-```powershell
+**2. Console Mode (Headless)**
+Run the engine in the terminal:
+```bash
 python main.py
 ```
 
-**Features:**
-- Interactive chat with Elias
-- Real-time HUD showing state changes:
-  - 📂 Memory triggers
-  - 🧠 Mood shifts
-  - ⚖️ Value changes
-  - 📈📉 Trust/respect updates
-  - 💭 Internal thoughts
-  - 🕸️ Knowledge graph connections
-
-**Example output:**
-```
-==================================================
-Chatting with Calmer Elias.
-System: Interaction Sandbox Active (HUD Enabled).
-==================================================
-
-You: Can you help me?
-
-📂 [Memory Triggered]: "Witnessed a preventable death due to lack of supplies..."
-🕸️ [Graph Connection]: Elias -[:HATES]-> Empire
-📈 [State Change] Trust: 17.40 -> 22.40
-Elias: I can try. What do you need?
-💭 [Internal Thought]: "User seems genuine. Cautiously optimistic."
-```
-
-### **Option 2: Web Dashboard**
-
-```powershell
-python run_dashboard.py
-```
-
-Then open: **http://localhost:8000**
-
-**Features:**
-- **Live State Visualization**: See character psychology update in real-time
-- **Interactive Chat**: Type messages directly in the browser
-- **Bento Grid Layout**:
-  - Psyche Profile (mood, goals, values bar chart)
-  - Chat Stream (conversation history)
-  - Relationship Meters (trust/respect circular gauges)
-  - Knowledge Graph (interactive Neo4j visualization)
-  - Subconscious Thoughts (internal monologue stream)
-
----
-
-## 🧠 How It Works
-
-### **1. Neuroplasticity Simulation**
-Values change slowly (±0.05 per interaction) to simulate realistic belief evolution:
-```python
-# Before: Pacifism = 0.9
-# User challenges with: "Sometimes violence is necessary"
-# After: Pacifism = 0.87 (small decrease)
-```
-
-### **2. Emotion-Based Memory Retrieval**
-Not keyword matching - the system analyzes emotional themes:
-```python
-User: "You're being naive about authority."
-→ LLM detects: ["condescension", "authority challenge"]
-→ Searches memory for: "being belittled by a superior"
-→ Retrieves: Memory of forced military enlistment
-```
-
-### **3. Ego & Resistance Modeling**
-Character can resist change even if user is logically correct:
-```python
-# If trust is low, challenging core values might DECREASE trust
-# Ego defense: "They're attacking what I believe in"
-```
-
-### **4. Knowledge Graph Reasoning**
-Traverses concept connections to understand why character cares:
-```
-User mentions "Empire"
-→ Graph: Elias -[HATES]-> Empire -[DESTROYED]-> Home
-→ Response colored by this relationship chain
-```
-
-### **5. Persistent State**
-Character state auto-saves to `character.json` after each interaction:
-```json
-{
-  "current_mood": "Calmer",
-  "values": {
-    "pacifism": {"score": 0.9, "justification": "Violence creates more patients"},
-    "authority_obedience": {"score": 0.22, "justification": "Orders got people killed"}
-  },
-  "relationships": {
-    "User_123": {"trust_level": 17.4, "respect_level": 43.9}
-  }
-}
-```
+### Resetting
+To wipe memories and start fresh:
+-   Click the **RESET** button in the dashboard.
+-   Or call the `/reset_character` endpoint.
+-   This restores `initial_character.json` and clears the Vector/Graph databases.
 
 ---
 
 ## 🛠️ Customization
 
-### **Change the Character**
-Edit `character.json` to modify Elias's base personality, or create a new character profile.
-
-### **Add More Memories**
-In `memory.py`, modify `seed_memories()`:
-```python
-fragments = [
-    MemoryFragment(
-        id="404", 
-        time_period="Recent", 
-        description="Your custom memory here",
-        emotional_tags=["Hope", "Fear"],
-        importance_score=0.8
-    )
-]
-```
-
-### **Adjust AI Model**
-In `brain.py`, change the Gemini model:
-```python
-llm = ChatGoogleGenerativeAI(
-    model="gemini-2.0-flash-exp",  # or "gemini-1.5-pro"
-    temperature=0.2  # Lower = more consistent, Higher = more creative
-)
-```
-
-### **Modify Graph Relationships**
-In `knowledge_graph.py`, add custom relationship types or queries.
-
----
-
-## 🔬 Advanced Features
-
-### **Graph RAG (Retrieval-Augmented Generation)**
-The system combines:
-- **Vector Similarity**: ChromaDB finds semantically similar memories
-- **Graph Traversal**: Neo4j finds conceptual relationships
-- **Hybrid Context**: Both feed into Gemini for richer responses
-
-### **Multi-Modal State Tracking**
-- Console HUD (ANSI colors)
-- JSON export (`live_state.json`)
-- Web dashboard (live polling)
-
-### **Resilient Architecture**
-- Falls back gracefully if Neo4j is unavailable
-- Auto-creates missing data structures
-- Persistent storage survives crashes
-
----
-
-## 📊 Dashboard Features
-
-### **Real-Time Visualizations**
-1. **Psyche Profile Card**
-   - Current mood indicator
-   - Active goals list
-   - Core values bar chart (dynamic updates)
-
-2. **Relationship Meters**
-   - Circular gauges for trust/respect
-   - Smooth animations on value changes
-
-3. **Knowledge Graph**
-   - Interactive Neo4j visualization using vis-network
-   - Shows character concepts and relationships
-
-4. **Subconscious Stream**
-   - Internal thought display
-   - Updates with each interaction
-
-5. **Memory Feed**
-   - Chips showing triggered memories
-   - Color-coded by source (vector vs graph)
-
----
-
-## 🐛 Troubleshooting
-
-### **"Module not found" errors**
-```powershell
-pip install -r requirements.txt
-```
-
-### **Neo4j connection failed**
-- System works without Neo4j (graph features disabled)
-- Check Neo4j is running: `neo4j status`
-- Verify credentials in `.env`
-
-### **Dashboard shows "DISCONNECTED"**
-- Run `python main.py` first to generate `live_state.json`
-- Or run `python run_dashboard.py` for integrated experience
-
-### **Gemini API errors**
-- Verify `GOOGLE_API_KEY` in `.env`
-- Check API quota: https://aistudio.google.com/app/apikey
-- Update to newer model if deprecated: `gemini-2.0-flash-exp`
-
----
-
-## 📚 Technical Stack
-
-- **LangChain**: Orchestration framework
-- **LangGraph**: State machine for multi-stage reasoning
-- **Google Gemini**: LLM (gemini-2.5-flash)
-- **ChromaDB**: Vector database for semantic memory
-- **Neo4j**: Graph database for concept relationships
-- **Pydantic**: Data validation and serialization
-- **Python**: Core application logic
-- **HTML/CSS/JS**: Real-time web dashboard
-- **vis-network**: Interactive graph visualization
-
----
-
-## 🎯 Use Cases
-
-1. **Interactive Storytelling**: Characters that remember and evolve
-2. **Therapy/Counseling Simulations**: Realistic emotional responses
-3. **Game NPCs**: Dynamic personalities that react to player behavior
-4. **Research**: Studying human-AI psychological dynamics
-5. **Education**: Teaching about cognitive psychology and AI
-
----
-
-## 🚧 Future Enhancements
-
-- Multi-character interactions
-- Voice synthesis integration
-- Long-term memory consolidation (episodic → semantic)
-- Personality disorder simulations
-- Memory decay/forgetting mechanisms
-- Dream/reflection cycles during idle time
-
----
-
-## 📄 License
-
-MIT
-
----
-
-## 🙏 Acknowledgments
-
-Built with LangChain, Google Gemini, ChromaDB, and Neo4j.
-Inspired by research in cognitive psychology, affective computing, and narrative AI. 
+-   **Character Backstory**: Edit `data/initial_character.json`.
+-   **Psychological Baseline**: Modify `DEFAULT_MOTIVATIONAL` in `src/motivational.py` to change how the character reacts to stress (e.g., changing Attachment Style from "Avoidant" to "Anxious").
+-   **Strategies**: Adjust `STRATEGY_MAP` in `src/brain.py` to define new behavioral outputs.

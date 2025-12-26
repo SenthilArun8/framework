@@ -18,3 +18,9 @@ class AgentState(TypedDict):
     subconscious_thought: str # Internal monologue
     motivational: dict        # Serialized MotivationalState (Needs, Emotions)
     old_profile: dict         # Snapshot of profile at start of turn (for delta tracking)
+    cognitive_frame: dict     # Structured output from SubconsciousNode (Phase 12)
+    
+    # New Cognitive Architecture Fields
+    cognitive_stack: List[dict] # History of CognitiveFrames
+    delta_history: List[dict]   # History of PersonalityDeltas
+    planned_actions: List[str]  # Output from Planning Node
